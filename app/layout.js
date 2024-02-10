@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./navbar";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import 'tailwindcss'
 
 config.autoAddCss = false
 const inter = Inter({ subsets: ["latin"] });

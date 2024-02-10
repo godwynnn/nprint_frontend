@@ -57,38 +57,109 @@
 .section_1{
   width: 100%;
   padding: 10% 4%;
-  min-height: 120vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-family: 'Oswald', sans-serif;
+  background-image: radial-gradient(circle at 0% 50%, var(--header-color-2), whitesmoke);
+  /* border: 1px solid red; */
 }
-.section_1 p:first-child{
-  font-size: 60px;
+.section_1 p{
+  font-size: 65px;
+}
+.section_1 div{
+  /* border: 1px solid red; */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px 0px rgb(212, 212, 212);
+  transform: translateY(20%);
 }
 
-.section_1 p:last-child{
+.section_1 div div:first-child{
+  /* transform: translateY(-20%); */
+  background-color: white;
+  box-shadow: none;
+  /* border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px; */
+}
+.section_1 div div:first-child img{
+  animation-name: Section1Img;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0.5s ease-in-out;
+  position: relative;
+}
+
+@keyframes Section1Img {
+    0%{
+      left: -20px;
+    }
+    50%{
+      left: 20px;
+
+    }
+    100%{
+      left: -20px;
+    }
+}
+.section_1 div div:last-child{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 5%;
+  color: black;
+  box-shadow: none;
+ 
+  /* justify-content: flex-end; */
+}
+.section_1 div div:last-child p:first-child{
+  font-size: 45px;
+
+}
+
+.section_1 div div:last-child p:last-child{
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
+  text-align: justify;
+
 }
 
 .section_2{
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  
+  /* background-color: whitesmoke; */
   /* padding: 10% 4%; */
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
 
 }
-.section_2 div:first-child{
-  width: 50%;
-  min-height: inherit;
+.section_2 p{
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+
+}
+.section_2 div{
+  /* border:  1px solid red; */
+}
+.section_2 div div:first-child{
+  /* width: 50%; */
+  /* height: inherit; */
   background-color: var(--header-color-2);
+  box-shadow: none;
+  /* border: 1px solid red; */
 
 }
 
-.section_2 div:last-child{
-  width: 50%;
-  min-height: inherit;
-  background-color: var(--header-color-1);
+.section_2 div div:last-child{
+  /* width: 50%; */
+  /* height: inherit; */
+  
+  /* background-color: var(--header-color-1); */
+}
+.section_2 div div:last-child p{
+  font-family: Oswald;
+  font-size: 25px;
 }

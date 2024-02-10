@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Croissant+One&family=Merriweather:ital@1&family=Oswald:wght@300;400;500;600&family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 
 :root{
     --header-color-1:#1D1E1B;
@@ -31,6 +36,7 @@ body{
     height: 100%;
     /* min-height: 5px;
     max-height: 5px; */
+    /* background-color: #1D1E1B; */
     /* border: 1px solid red; */
 }
 
@@ -38,6 +44,7 @@ body{
   
   [class^="number-slide"],
   [class*=" number-slide"] {
+    /* background: #565756; */
     background: none;
     display: flex;
     align-items: center;
@@ -45,6 +52,8 @@ body{
     font-size: 50px;
     color: #fff;
     font-weight: 500;
+    /* border-radius: 5%; */
+    
    
   }
   
