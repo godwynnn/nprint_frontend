@@ -2,7 +2,7 @@
 
 // import Image from "next/image";
 import styles from '../styles/page.module.css'
-import '../styles/page.module.css'
+// import '../styles/page.module.css'
 import Menu from './menu';
 import  headimg_1 from '../images/head_4.png'
 import Image from 'next/image';
@@ -96,7 +96,7 @@ export default function Home() {
 
         <div className={styles.sub_header_1}>
         {/* <p>Africa's 1st 3D Print On Demand Agency</p> */}
-          <p>WE ARE <br />3DIMENSIONAL </p>
+          <p>WE ARE <br /><span>3DIMENSIONAL</span> </p>
           
 
         </div>
@@ -124,38 +124,34 @@ export default function Home() {
 
 
     {/* SECTION 1 */}
+    
       <section  className={styles.section_1}>
-       
-      <p>Africa's No1 3D Printing Agency</p>
-        <div className=' w-4/5 h-96  flex'>
-          <div className=' w-2/4 h-full flex items-center justify-center'>
-            <Image src={require('../images/3D7.png')} className='h-3/4 w-2/4'/>
 
-          </div>
+          
+          
+          
+          <p>Africa's No1 3D Printing Agency</p>
+            <div className={`${styles.section_1_sub_section} w-4/5 h-96  flex`}>
+              
+            </div>
 
-          <div className='w-4/5 h-full'>
+
             
-            <p>With over 30 years of combined Rapid Prototyping experience, you can rest assured that Imaginarium can meet your needs. We believe in the highest calibre of service and adapt to the needs of each individual client. We listen, we internalize, we’re responsive, and we deliver projects on-time.</p>
+
+
+            <div class="wave1">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+          </svg>
           </div>
 
-        </div>
 
-
-        <div className=' w-4/5 h-96  flex'>
-          <div className=' w-2/4 h-full flex items-center justify-center'>
-            <Image src={require('../images/3D7.png')} className='h-3/4 w-2/4'/>
-
-          </div>
-
-          <div className='w-4/5 h-full'>
-            
-            <p>With over 30 years of combined Rapid Prototyping experience, you can rest assured that Imaginarium can meet your needs. We believe in the highest calibre of service and adapt to the needs of each individual client. We listen, we internalize, we’re responsive, and we deliver projects on-time.</p>
-          </div>
-
-        </div>
-
-
-
+          
+        <div class="wave2">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+          </svg>
+      </div>
       </section>
 
 

@@ -172,3 +172,51 @@ body{
     transform: scale(2);
 }
 
+
+
+/* SVG */
+.wave1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    /* height: 30%; */
+    /* transform: rotate(180deg); */
+    /* background-color: black; */
+    /* box-shadow: none; */
+}
+
+.wave1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+.wave1 .shape-fill {
+    fill: var(--header-color-2);
+}
+
+
+
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    /* background-color: white; */
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(116% + 1.3px);
+    height: 150px;
+}
+
+.wave2 .shape-fill {
+    fill: white;
+}
