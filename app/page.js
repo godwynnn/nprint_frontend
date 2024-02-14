@@ -95,23 +95,25 @@ export default function Home() {
 
 
         <div className={styles.sub_header_1}>
-          <p>WE ARE <span> 3 DIMENSIONAL</span> </p>
-          <p>Africa's 1st 3D Print On Demand Agency</p>
+        {/* <p>Africa's 1st 3D Print On Demand Agency</p> */}
+          <p>WE ARE <br />3DIMENSIONAL </p>
+          
 
         </div>
 
         <div  className={styles.sub_header_2}>
-          <div ref={sliderRef} className="keen-slider">
-            {
-              header_images.map((image,index)=>(
-                  <div ref={headerSlideRef} key={index} className="keen-slider__slide number-slide1" >
-                  <Image src={image.src} alt="" className='head_slide_img' />
-              </div>
-              ))
-            }
-            
+
+      
+          <div>
+            <Image src={require('../images/3D6.png')} alt="" />
           </div>
 
+          {/* <div>
+              <p>WE WILL MAKE YOU A BRAND</p>
+              <p>You are assured that Nprint can meet your needs. We believe in the highest calibre of service and adapt to the needs of each individual client.We listen, we internalize, we’re responsive, and we deliver projects on-time.</p>
+
+          </div> */}
+          
 
           
         </div>
@@ -137,6 +139,22 @@ export default function Home() {
           </div>
 
         </div>
+
+
+        <div className=' w-4/5 h-96  flex'>
+          <div className=' w-2/4 h-full flex items-center justify-center'>
+            <Image src={require('../images/3D7.png')} className='h-3/4 w-2/4'/>
+
+          </div>
+
+          <div className='w-4/5 h-full'>
+            
+            <p>With over 30 years of combined Rapid Prototyping experience, you can rest assured that Imaginarium can meet your needs. We believe in the highest calibre of service and adapt to the needs of each individual client. We listen, we internalize, we’re responsive, and we deliver projects on-time.</p>
+          </div>
+
+        </div>
+
+
 
       </section>
 
@@ -166,6 +184,11 @@ export default function Home() {
 
           </div>
             
+      </section>
+
+
+      <section className={styles.section_3}>
+
       </section>
     </main>
   );
