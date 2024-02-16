@@ -21,6 +21,12 @@
 .nav ul li{
     list-style: none;
 }
+.nav ul li:nth-child(2){
+    font-family: "Protest Strike", sans-serif;
+    font-size: 20px;
+    /* transform: rotateX(45deg); */
+    /* border: 1px solid red; */
+}
 /* .nav ul li:nth-child(1){
     background-color: var(--header-color-2);
 } */

@@ -10,7 +10,7 @@
   display:  flex;
   flex-direction: row;
   overflow-x: hidden;
-  background-image: radial-gradient(farthest-side at left 10% ,whitesmoke ,white);
+  background-image: radial-gradient(farthest-side at left 10% ,rgb(219, 218, 218) ,var(--header-color-2));
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -26,7 +26,7 @@
   /* border: 1px solid red; */
   background-image: url(../images/splash.png);
   background-repeat: no-repeat;
-  background-position: left -120% bottom 15%;
+  background-position: left -120% bottom 30%;
   background-size: 90%;
 }
 .sub_header_1 p{
@@ -36,7 +36,7 @@
   /* display: flex;
   flex-direction: column; */
   position: relative;
-  top: 40%;
+  top: 30%;
   font-size: 15px;
   font-weight: 400;
   /* font-size: 100px; */
@@ -83,7 +83,7 @@
 .sub_header_2 div:first-child{
   width: 90%;
   height: inherit;
-  background-color:black;
+  background-color:var(--header-color-1);
   padding: 2%;
   /* transform: skewY(40deg) skewX(-15deg); */
   
@@ -138,37 +138,109 @@
   height: inherit;
   color: white;
   font-family: "Protest Strike", sans-serif;
+  
 }
+
+
+/* FEATURES */
+.features{
+  width: 100%;
+  /* border: 1px solid red; */
+  min-height: 70vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3,1fr);
+  padding: 12%;
+  grid-gap: 2%;
+
+}
+.features div{
+  text-align: justify;
+
+  /* border: 1px solid red; */
+}
+.features div svg{
+  font-size: 40px;
+}
+.features div p:first-child{
+  font-size: 25px;
+  font-family: 'DM Serif Display', serif;
+  font-family: "Protest Strike", sans-serif;
+}
+.features div p:last-child{
+  font-size: 16px;
+  font-family: 'DM Serif Display', serif;
+  font-family: Merriweather;
+  font-weight: 'lighter';
+}
+/* SECTION 1 */
+
+
 .section_1{
   width: 100%;
-  padding: 10% 4%;
-  min-height: 180vh;
+  padding: 0% 4%;
+  min-height: 150vh;
   margin-top: 0%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'DM Serif Display', serif;
   /* background-color: var(--header-color-1); */
-  background-color: rgba(0, 0, 0, 0.938);
+  background-color: rgb(219, 218, 218);
   position: relative;
   /* background-image: radial-gradient(circle at 0% 50%, var(--header-color-2), whitesmoke); */
   /* border: 1px solid red; */
 }
 
 
-.section_1 p{
-  font-size: 40px;
-  color: white;
+.section_1 div:first-child{
+  width: 40%;
+  min-height: 50%;
+  padding: 4%;
 }
+
+.section_1 div:first-child p:nth-child(odd){
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 2%;
+  color: black;
+  font-family: "Protest Strike", sans-serif;
+  font-family: 'DM Serif Display', serif;
+}
+
+.section_1 div:first-child p:nth-child(even){
+  font-size: 30px;
+  text-transform: capitalize;
+  padding: 2%;
+  color: black;
+  font-family: "Protest Strike", sans-serif;
+  /* font-family: 'DM Serif Display', serif; */
+}
+
 .section_1_sub_section{
   /* border: 1px solid red; */
-  background-color: white;
+  background-color: var(--header-color-2);
+  /* background-image: url(../images/wave1.png); */
   border-radius: 10px;
+  width: 50%;
+  height: 120vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* border: none; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   
   /* box-shadow: 1px 1px 20px 0px rgb(212, 212, 212); */
-  transform: translateY(20%);
+  transform: translateY(-10%);
+}
+.section_1_sub_section img{
+  width: 85%;
+  height: 80%;
 }
 
 .section_1_sub_section div:first-child{
@@ -256,5 +328,5 @@
   width: 100%;
   min-height: 100vh;
   /* background-image: none; */
-  background-color: black;
+  background-color: var(--header-color-1);
 }
