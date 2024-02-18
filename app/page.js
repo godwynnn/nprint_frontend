@@ -100,7 +100,7 @@ export default function Home() {
           {/* <p>Africa's 1st 3D Print On Demand Agency</p> */}
           <p>WE ARE <br /><span>3DIMENSIONAL</span> </p>
 
-
+        
         </div>
 
         <div className={styles.sub_header_2}>
@@ -123,7 +123,16 @@ export default function Home() {
 
       </header>
 
-      <section className={`${styles.features}`}>
+      <section className={`${styles.features} grid lg:grid-cols-4 md:grid-cols-2 `}>
+
+        <div className="feature">
+          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon'/>
+          <div className="desc">
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum voluptates nihil?</p>
+          </div>
+        </div>
+
 
         <div className="feature">
           <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon'/>
@@ -156,7 +165,7 @@ export default function Home() {
 
       {/* SECTION 1 */}
 
-      <section className={`${styles.section_1} flex lg:min-h-[140vh] lg:flex-row-reverse md:min-h-[200vh] md:flex-col-reverse `}>
+      <section className={`${styles.section_1} flex lg:min-h-[140vh] lg:flex-row-reverse lg: -translate-y-[2%] md:min-h-[200vh] md:flex-col-reverse sm:min-h-[200vh] sm:flex-col-reverse max-sm:min-h-[200vh] max-sm:flex-col-reverse`}>
 
 
         <div className='lg:w-[40%] md:w-[80%]'>
@@ -164,9 +173,11 @@ export default function Home() {
           <p>we will make you a brand</p>
           <p>We provide prototypes to an assortment of industries from jewellery, engineering, automotive, architecture, consumer goods, etc. With our diverse range of state-of-the-art equipment, we offer customers complete solutions.
           </p>
+
+          <button className='p-2 lg:w-[50%] md:w-[50%] sm:w-[50%] max-sm:w-[50%]'>Explore</button>
         </div>
 
-        <div className={`${styles.section_1_sub_section} w-3/5 h-96  flex`}>
+        <div className={`${styles.section_1_sub_section} p-[5%] lg:w-[50%] lg:h-[100vh]  md:w-[70%] md:min-h-[60%] md:p-[5%] sm:h-[80vh]`}>
           <Image src={require('../images/section_12.webp')} />
 
 
@@ -196,35 +207,35 @@ export default function Home() {
 
 
       {/* SECTION 2*/}
-      <section className={`${styles.section_2} flex  flex-col  p-12 lg:h-[150vh]    sm:h-[180vh]  max-sm:h-[200vh]`}>
+      <section className={`${styles.section_2} flex  flex-col  p-12 lg:h-[150vh] sm:h-[180vh]  max-sm:h-[220vh]`}>
 
         <p>EXPLORE OUR UNMATCHED SERVICES</p>
 
-        <div className='  lg:grid-cols-3 grid p-20 md:grid-cols-2 sm:grid-cols-2 max-sm:grid-cols-1'>
-          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+        <div className='services_card_holder'>
+          <div className='services_card'>
             <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
           </div>
 
 
-          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+          <div className='services_card'>
             <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
           </div>
 
-          <div className=' lg:h-1/5  w-2/5 md: h-full'>
-            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
-          </div>
-
-
-          <div className=' lg:h-1/5  w-2/5 md: h-full'>
-            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
-          </div>
-
-          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+          <div className='services_card'>
             <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
           </div>
 
 
-          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+          <div className='services_card'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+          </div>
+
+          <div className='services_card'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+          </div>
+
+
+          <div className='services_card'>
             <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
           </div>
           
@@ -235,6 +246,11 @@ export default function Home() {
 
 
       <section className={styles.section_3}>
+
+        <div className={`${styles.testimonial_container} flex justify-center p-5 py-[5%] text-white lg:w-[100%]`}>
+          <p>Avail Our Services</p>
+          
+        </div>
 
       </section>
     </main>

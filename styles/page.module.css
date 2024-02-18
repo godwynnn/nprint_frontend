@@ -146,17 +146,18 @@
 .features{
   width: 100%;
   /* border: 1px solid red; */
-  min-height: 70vh;
-  display: grid;
+  min-height: 80vh;
+  /* display: grid; */
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(3,1fr);
-  padding: 12%;
-  grid-gap: 2%;
+  /* grid-template-columns: repeat(3,1fr); */
+  padding: 10%;
+  grid-gap: 3%;
 
 }
 .features div{
-  text-align: justify;
+  text-align: left;
+  cursor: pointer;
 
   /* border: 1px solid red; */
 }
@@ -167,13 +168,26 @@
 
 }
 .features div p:first-child{
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'DM Serif Display', serif;
   font-family: "Protest Strike", sans-serif;
-  color: rgb(66, 66, 66)
+  color: rgb(66, 66, 66);
+  
+}
+.features div p:first-child::after{
+  content: '';
+  width: 0%;
+  height: 1px;
+  display: flex;
+  /* flex: 1; */
+  background-color: rgb(66, 66, 66);
+  transition: 0.5s ease-in;
+}
+.features div:hover p:first-child::after{
+  width: 90%;
 }
 .features div p:last-child{
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Chivo Mono", monospace;
   color: rgb(128, 128, 128);
   /* font-style: normal; */
@@ -228,14 +242,61 @@
   color: rgb(66, 66, 66)
   /* font-family: 'DM Serif Display', serif; */
 }
+.section_1 div:first-child button{
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  font-family: "Protest Strike", sans-serif;
+  font-family: 'DM Serif Display', serif; 
+  
+}
+
+.section_1 div:first-child button::after{
+  content: '';
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(66, 66, 66);
+  /* color: white; */
+  transition: 1s ease;
+  z-index: -1;
+}
+
+
+.section_1 div:first-child button::before{
+  content: '';
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(66, 66, 66);
+  /* color: white; */
+  transition: 0.8s ease;
+  z-index: -1;
+}
+
+.section_1 div:first-child button:hover::after{
+  width: 50%;
+}
+.section_1 div:first-child button:hover::before{
+  width: 60%;
+}
+.section_1 div:first-child button:hover{
+  color: white;
+}
 
 .section_1_sub_section{
   /* border: 1px solid red; */
   background-color: var(--header-color-2);
   /* background-image: url(../images/wave1.png); */
   border-radius: 10px;
-  width: 50%;
-  height: 100vh;
+  /* width: 50%;
+  height: 100vh; */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -246,7 +307,7 @@
   
   
   /* box-shadow: 1px 1px 20px 0px rgb(212, 212, 212); */
-  transform: translateY(-16%);
+  /* transform: translateY(-16%); */
 }
 .section_1_sub_section img{
   width: 80%;
@@ -340,4 +401,10 @@
   
   /* background-image: none; */
   background-color: var(--header-color-1);
+}
+.testimonial_container{
+  border: 1px solid red;
+}
+.testimonial_container p{
+  font-family: "Protest Strike", sans-serif;
 }

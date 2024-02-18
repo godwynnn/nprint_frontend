@@ -8,7 +8,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+    .services_card_holder{
+        @apply lg:grid-cols-3 grid p-20 md:grid-cols-2 sm:grid-cols-2 max-sm:grid-cols-1
 
+    }
+    .services_card{
+        @apply lg:h-1/5  w-2/5 md:h-full max-sm:h-full
+    }
+
+    .feature{
+        @apply bg-stone-50 p-[5%] rounded
+    }
+}
 
 :root{
     --header-color-1:#1D1E1B;
@@ -193,7 +205,7 @@ body{
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 146px;
+    height: 150px;
 }
 .wave1 .shape-fill {
     fill: var(--header-color-2);
@@ -215,7 +227,7 @@ body{
     position: relative;
     display: block;
     width: calc(116% + 1.3px);
-    height: 150px;
+    height: 160px;
 }
 
 .wave2 .shape-fill {
