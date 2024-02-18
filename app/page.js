@@ -156,10 +156,10 @@ export default function Home() {
 
       {/* SECTION 1 */}
 
-      <section className={styles.section_1}>
+      <section className={`${styles.section_1} flex lg:min-h-[140vh] lg:flex-row-reverse md:min-h-[200vh] md:flex-col-reverse `}>
 
 
-        <div>
+        <div className='lg:w-[40%] md:w-[80%]'>
           <p>About us</p>
           <p>we will make you a brand</p>
           <p>We provide prototypes to an assortment of industries from jewellery, engineering, automotive, architecture, consumer goods, etc. With our diverse range of state-of-the-art equipment, we offer customers complete solutions.
@@ -196,29 +196,41 @@ export default function Home() {
 
 
       {/* SECTION 2*/}
-      <section className={`${styles.section_2} flex  flex-col items-center justify-center p-12`}>
+      <section className={`${styles.section_2} flex  flex-col  p-12 lg:h-[150vh]    sm:h-[180vh]  max-sm:h-[200vh]`}>
 
         <p>EXPLORE OUR UNMATCHED SERVICES</p>
 
-        <div className='h-3/5 w-3/5 flex-row relative  mt-14'>
-
-          <div className=' h-2/4 w-1/4 rounded-lg absolute top-14   -left-36  ' >
-            <Image src={require('../images/head_7.png')} className='h-full rounded-lg ' />
-
-
+        <div className='  lg:grid-cols-3 grid p-20 md:grid-cols-2 sm:grid-cols-2 max-sm:grid-cols-1'>
+          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
           </div>
 
-          <div className=' h-full w-full rounded-lg  bg-white flex flex-col justify-center items-center p-20 '>
 
-            <p className=' text-black text-lg '>
-              We provide prototypes to an assortment of industries from jewellery, engineering, automotive, architecture, consumer goods, etc. With our diverse range of state-of-the-art equipment, we offer customers complete solutions.
-
-            </p>
-
+          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
           </div>
 
+          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+          </div>
+
+
+          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+          </div>
+
+          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+          </div>
+
+
+          <div className=' lg:h-1/5  w-2/5 md: h-full'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+          </div>
+          
         </div>
 
+        
       </section>
 
 
