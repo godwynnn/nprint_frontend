@@ -20,6 +20,9 @@
     .feature{
         @apply bg-stone-50 p-[5%] rounded
     }
+    .swiper-pagination-bullet{
+        @apply bg-slate-50
+    }
 }
 
 :root{

@@ -13,6 +13,11 @@ import { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// import required modules
+import { Pagination,Autoplay } from 'swiper/modules';
 
 const header_images = [
   {
@@ -100,7 +105,7 @@ export default function Home() {
           {/* <p>Africa's 1st 3D Print On Demand Agency</p> */}
           <p>WE ARE <br /><span>3DIMENSIONAL</span> </p>
 
-        
+
         </div>
 
         <div className={styles.sub_header_2}>
@@ -126,7 +131,7 @@ export default function Home() {
       <section className={`${styles.features} grid lg:grid-cols-4 md:grid-cols-2 `}>
 
         <div className="feature">
-          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon'/>
+          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon' />
           <div className="desc">
             <p>Lorem ipsum dolor sit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum voluptates nihil?</p>
@@ -135,7 +140,7 @@ export default function Home() {
 
 
         <div className="feature">
-          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon'/>
+          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon' />
           <div className="desc">
             <p>Lorem ipsum dolor sit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum voluptates nihil?</p>
@@ -144,7 +149,7 @@ export default function Home() {
 
 
         <div className="feature">
-          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon'/>
+          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon' />
           <div className="desc">
             <p>Lorem ipsum dolor sit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum voluptates nihil?</p>
@@ -153,13 +158,13 @@ export default function Home() {
 
 
         <div className="feature">
-          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon'/>
+          <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon' />
           <div className="desc">
             <p>Lorem ipsum dolor sit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum voluptates nihil?</p>
           </div>
         </div>
-        
+
       </section>
 
 
@@ -213,43 +218,117 @@ export default function Home() {
 
         <div className='services_card_holder'>
           <div className='services_card'>
-            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full' />
           </div>
 
 
           <div className='services_card'>
-            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full' />
           </div>
 
           <div className='services_card'>
-            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
-          </div>
-
-
-          <div className='services_card'>
-            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
-          </div>
-
-          <div className='services_card'>
-            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full' />
           </div>
 
 
           <div className='services_card'>
-            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full'/>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full' />
           </div>
-          
+
+          <div className='services_card'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full' />
+          </div>
+
+
+          <div className='services_card'>
+            <Image src={require('../images/head_6.jpeg')} className=' h-full w-full' />
+          </div>
+
         </div>
 
-        
+
       </section>
 
 
       <section className={styles.section_3}>
 
-        <div className={`${styles.testimonial_container} flex justify-center p-5 py-[5%] text-white lg:w-[100%]`}>
-          <p>Avail Our Services</p>
-          
+        <div className={`${styles.testimonial_container} flex flex-col items-center p-5 py-[5%] text-white lg:w-[100%] lg:h-[130vh]`}>
+          <p className='lg:text-[35px]'>Avail Our Services</p>
+
+          <div className=' mt-[10%] lg:w-[80%] lg:h-[100%] '>
+            <Swiper
+              slidesPerView={2}
+              spaceBetween={60}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              
+              // pagination={{
+              //   clickable: false,
+              //   dynamicBullets:true
+              // }}
+              modules={[Autoplay]}
+              className="mySwiper lg:h-full"
+            >
+
+
+
+              <SwiperSlide className='flex flex-col '>
+                <div className='lg:h-[40%] flex flex-col items-center p-5'>
+                <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+
+                </div>
+                <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
+                  <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
+                </div>
+              </SwiperSlide>
+
+
+              <SwiperSlide className='flex flex-col '>
+                <div className='lg:h-[40%] flex flex-col items-center p-5'>
+                <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+
+                </div>
+                <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
+                <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
+                </div>
+              </SwiperSlide>
+
+
+              <SwiperSlide className='flex flex-col '>
+                <div className='lg:h-[40%] flex flex-col items-center p-5'>
+                <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+
+                </div>
+                <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
+                <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
+                </div>
+              </SwiperSlide>
+
+
+              <SwiperSlide className='flex flex-col '>
+                <div className='lg:h-[40%] flex flex-col items-center p-5'>
+                <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+
+                </div>
+                <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
+                <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+          </div>
+
         </div>
 
       </section>

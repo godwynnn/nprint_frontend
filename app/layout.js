@@ -4,6 +4,10 @@ import Navbar from "./navbar";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'tailwindcss'
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 config.autoAddCss = false
 const inter = Inter({ subsets: ["latin"] });
