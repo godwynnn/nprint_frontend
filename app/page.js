@@ -17,7 +17,7 @@ import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import required modules
-import { Pagination,Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 const header_images = [
   {
@@ -183,7 +183,7 @@ export default function Home() {
         </div>
 
         <div className={`${styles.section_1_sub_section} p-[5%] lg:w-[50%] lg:h-[100vh]  md:w-[70%] md:min-h-[60%] md:p-[5%] sm:h-[80vh]`}>
-          <Image src={require('../images/section_12.webp')} />
+          <Image src={require('../images/products.png')} />
 
 
         </div>
@@ -205,6 +205,34 @@ export default function Home() {
         <div class="wave2">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+          </svg>
+        </div>
+      </section>
+
+      {/* OPERATIONS */}
+
+      <section className={`${styles.operation}  lg:h-[120vh] lg:w-[100%] relative`}>
+
+        <div className=' flex lg:h-[80%] lg:w-[100%] lg:flex-row items-center md:flex-col '>
+          <div className='flex p-[8%] flex-col items-right justify-center lg:h-[100%] lg:w-[60%] md:h-[40%]'>
+            <p>Operational Plan</p>
+            <p className='mt-4'>Utilizing cutting-edge 3D
+              printing technology and regularly
+              upgrading to stay at the forefront
+              of innovation.Assembling a skilled team with
+              expeɠise in 3D modeling,
+              printing, and post-processing
+              techniques.</p>
+
+          </div>
+
+          <Image className=' lg:w-[30%] md:w-[40%]' src={require('../images/machine.png')} />
+
+        </div>
+
+        <div className="wave3">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
           </svg>
         </div>
       </section>
@@ -264,7 +292,7 @@ export default function Home() {
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-              
+
               // pagination={{
               //   clickable: false,
               //   dynamicBullets:true
@@ -277,7 +305,7 @@ export default function Home() {
 
               <SwiperSlide className='flex flex-col '>
                 <div className='lg:h-[40%] flex flex-col items-center p-5'>
-                <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
 
                 </div>
                 <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
@@ -290,11 +318,11 @@ export default function Home() {
 
               <SwiperSlide className='flex flex-col '>
                 <div className='lg:h-[40%] flex flex-col items-center p-5'>
-                <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
 
                 </div>
                 <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
-                <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+                  <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
@@ -303,11 +331,11 @@ export default function Home() {
 
               <SwiperSlide className='flex flex-col '>
                 <div className='lg:h-[40%] flex flex-col items-center p-5'>
-                <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
 
                 </div>
                 <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
-                <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+                  <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
@@ -316,11 +344,11 @@ export default function Home() {
 
               <SwiperSlide className='flex flex-col '>
                 <div className='lg:h-[40%] flex flex-col items-center p-5'>
-                <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
 
                 </div>
                 <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
-                <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+                  <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>

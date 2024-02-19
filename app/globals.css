@@ -234,5 +234,30 @@ body{
 }
 
 .wave2 .shape-fill {
+    fill: var(--header-color-2);
+}
+
+.wave3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    /* transform: rotate(180deg); */
+    /* background-color: black; */
+
+}
+
+.wave3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 87px;
+}
+
+.wave3 .shape-fill {
+    fill: var(--header-color-2);
     fill: white;
+
 }
