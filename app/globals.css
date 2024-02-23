@@ -26,7 +26,8 @@
 }
 
 :root{
-    --header-color-1:#1D1E1B;
+    /* --header-color-1:#1D1E1B; */
+    --header-color-1:#121212;
     --header-color-2:#FFFBFC;
   }
   

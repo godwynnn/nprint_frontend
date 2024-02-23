@@ -18,6 +18,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
+import { Suspense } from 'react';
+
 
 const header_images = [
   {
@@ -283,9 +285,9 @@ export default function Home() {
         <div className={`${styles.testimonial_container} flex flex-col items-center p-5 py-[5%] text-white lg:w-[100%] lg:h-[130vh]`}>
           <p className='lg:text-[35px]'>Avail Our Services</p>
 
-          <div className=' mt-[10%] lg:w-[80%] lg:h-[100%] '>
+          <div className=' mt-[10%] lg:w-[60%] lg:h-[100%] '>
             <Swiper
-              slidesPerView={2}
+              slidesPerView={1}
               spaceBetween={60}
               loop={true}
               autoplay={{
@@ -304,8 +306,8 @@ export default function Home() {
 
 
               <SwiperSlide className='flex flex-col '>
-                <div className='lg:h-[40%] flex flex-col items-center p-5'>
-                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+                <div className='lg:h-[50%] flex flex-col items-center p-5'>
+                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[30%] rounded-[10%] ' />
 
                 </div>
                 <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
@@ -317,8 +319,8 @@ export default function Home() {
 
 
               <SwiperSlide className='flex flex-col '>
-                <div className='lg:h-[40%] flex flex-col items-center p-5'>
-                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+                <div className='lg:h-[50%] flex flex-col items-center p-5'>
+                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[30%] rounded-[10%] ' />
 
                 </div>
                 <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
@@ -330,21 +332,8 @@ export default function Home() {
 
 
               <SwiperSlide className='flex flex-col '>
-                <div className='lg:h-[40%] flex flex-col items-center p-5'>
-                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
-
-                </div>
-                <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
-                  <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
-
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
-                </div>
-              </SwiperSlide>
-
-
-              <SwiperSlide className='flex flex-col '>
-                <div className='lg:h-[40%] flex flex-col items-center p-5'>
-                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[40%] rounded-[50%] ' />
+                <div className='lg:h-[50%] flex flex-col items-center p-5'>
+                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[30%] rounded-[10%] ' />
 
                 </div>
                 <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
