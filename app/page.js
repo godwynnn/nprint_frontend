@@ -305,8 +305,8 @@ export default function Home() {
 
 
 
-              <SwiperSlide className=' lg:flex-row '>
-                  <Image src={require('../images/head_6.jpeg')} className=' relative  left-[-10%] items-center p-5 lg:h-[100%] lg:w-[30%]  lg:flex-row md:h-[100%] rounded-[10%] ' />
+              <SwiperSlide className=' items-center p-[2%] lg:flex-row  '>
+                  <Image src={require('../images/head_6.jpeg')} className='lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[100%] rounded-[10%] ' />
 
                 
                 <div className=' flex flex-col p-10 rounded-lg lg:h-[50%] text-white text-left' >
@@ -315,6 +315,20 @@ export default function Home() {
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
               </SwiperSlide>
+
+
+              <SwiperSlide className=' items-center p-[2%] lg:flex-row  '>
+                  <Image src={require('../images/head_6.jpeg')} className='lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[100%] rounded-[10%] ' />
+
+                
+                <div className=' flex flex-col p-10 rounded-lg lg:h-[50%] text-white text-left' >
+                  <p className=' font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]'>Lorem, ipsum.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
+                </div>
+              </SwiperSlide>
+
+             
 
 
 
