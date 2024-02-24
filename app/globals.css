@@ -27,7 +27,7 @@
 
 :root{
     /* --header-color-1:#1D1E1B; */
-    --header-color-1:#121212;
+    --header-color-1:#0c0c0c;
     --header-color-2:#FFFBFC;
   }
   
@@ -258,7 +258,7 @@ body{
 }
 
 .wave3 .shape-fill {
-    fill: var(--header-color-2);
+    /* fill: var(--header-color-2); */
     fill: white;
 
 }

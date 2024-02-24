@@ -215,8 +215,8 @@ export default function Home() {
 
       <section className={`${styles.operation}  lg:h-[120vh] lg:w-[100%] relative`}>
 
-        <div className=' flex lg:h-[80%] lg:w-[100%] lg:flex-row items-center md:flex-col '>
-          <div className='flex p-[8%] flex-col items-right justify-center lg:h-[100%] lg:w-[60%] md:h-[40%]'>
+        <div className=' flex lg:h-[80%] lg:w-[100%] lg:flex-row items-center md:flex-col  sm:flex-col max-sm:flex-col'>
+          <div className='flex p-[8%] flex-col items-right justify-center lg:h-[100%] lg:w-[60%] md:h-[40%] '>
             <p>Operational Plan</p>
             <p className='mt-4'>Utilizing cutting-edge 3D
               printing technology and regularly
@@ -228,7 +228,7 @@ export default function Home() {
 
           </div>
 
-          <Image className=' lg:w-[30%] md:w-[40%]' src={require('../images/machine.png')} />
+          <Image className=' lg:w-[30%] md:w-[50%] sm:w-[60%] max-sm:w-[60%]' src={require('../images/machine.png')} />
 
         </div>
 
@@ -282,17 +282,17 @@ export default function Home() {
 
       <section className={styles.section_3}>
 
-        <div className={`${styles.testimonial_container} flex flex-col items-center p-5 py-[5%] text-white lg:w-[100%] lg:h-[130vh]`}>
-          <p className='lg:text-[35px]'>Avail Our Services</p>
+        <div className={`${styles.testimonial_container} flex flex-col items-center p-5 py-[5%] text-white lg:w-[100%] lg:h-[150vh]`}>
+          <p className='lg:text-[35px] md:text-[35px] max-md:text-[35px]  sm:text-[30px] max-sm:text-[30px]'>Avail Our Services</p>
 
-          <div className=' mt-[10%] lg:w-[60%] lg:h-[100%] '>
+          <div className='mt-[10%] lg:w-[60%] lg:h-[100%] md:h-[100%]'>
             <Swiper
               slidesPerView={1}
-              spaceBetween={60}
+              // spaceBetween={20}
               loop={true}
               autoplay={{
                 delay: 2500,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
               }}
 
               // pagination={{
@@ -300,48 +300,27 @@ export default function Home() {
               //   dynamicBullets:true
               // }}
               modules={[Autoplay]}
-              className="mySwiper lg:h-full"
+              className="mySwiper lg:h-[50%] lg:w-[100%] "
             >
 
 
 
-              <SwiperSlide className='flex flex-col '>
-                <div className='lg:h-[50%] flex flex-col items-center p-5'>
-                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[30%] rounded-[10%] ' />
+              <SwiperSlide className=' lg:flex-row '>
+                  <Image src={require('../images/head_6.jpeg')} className=' relative  left-[-10%] items-center p-5 lg:h-[100%] lg:w-[30%]  lg:flex-row md:h-[100%] rounded-[10%] ' />
 
-                </div>
-                <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
-                  <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
-
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
-                </div>
-              </SwiperSlide>
-
-
-              <SwiperSlide className='flex flex-col '>
-                <div className='lg:h-[50%] flex flex-col items-center p-5'>
-                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[30%] rounded-[10%] ' />
-
-                </div>
-                <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
-                  <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+                
+                <div className=' flex flex-col p-10 rounded-lg lg:h-[50%] text-white text-left' >
+                  <p className=' font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]'>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
               </SwiperSlide>
 
 
-              <SwiperSlide className='flex flex-col '>
-                <div className='lg:h-[50%] flex flex-col items-center p-5'>
-                  <Image src={require('../images/head_6.jpeg')} className=' h-[100%] w-[30%] rounded-[10%] ' />
 
-                </div>
-                <div className=' bg-stone-50 p-10 rounded-lg lg:h-[50%] text-black text-center' >
-                  <p className='lg:text-[30px] md:text-[30px] sm:text-[20px] max-sm:text-[20px]'>Lorem, ipsum.</p>
+              
 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
-                </div>
-              </SwiperSlide>
+             
             </Swiper>
 
           </div>

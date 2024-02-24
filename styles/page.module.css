@@ -346,6 +346,23 @@
 }
 
 
+/* OPERATION */
+.operation div:first-child{
+  /* border: 1px solid red; */
+  font-family: "Protest Strike", sans-serif;
+  color: rgb(66, 66, 66);
+}
+.operation div:first-child div p:first-child{
+  font-size: 40px;
+
+}
+.operation div:first-child div p:last-child{
+  font-size: 18px;
+  color: rgb(97, 97, 97);
+  font-family: "Chivo Mono", monospace;
+}
+
+
 /* SECTION 2 */
 
 .section_2{
@@ -397,7 +414,7 @@
 
 .section_3{
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
   
   /* background-image: none; */
   background-color: var(--header-color-1);
@@ -421,17 +438,10 @@
 .testimonial_container div div div div:last-child p:last-child{
   font-family: "Chivo Mono", monospace;
 }
-.operation div:first-child{
-  /* border: 1px solid red; */
-  font-family: "Protest Strike", sans-serif;
-  color: rgb(66, 66, 66);
-}
-.operation div:first-child div p:first-child{
-  font-size: 40px;
 
-}
-.operation div:first-child div p:last-child{
-  font-size: 18px;
-  color: rgb(97, 97, 97);
-  font-family: "Chivo Mono", monospace;
+
+.testimonial_container div div div div:last-child{
+  background-color: #171717;
+  display: flex;
+  /* flex-direction: row; */
 }
