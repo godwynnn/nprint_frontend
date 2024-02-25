@@ -23,6 +23,18 @@
     .swiper-pagination-bullet{
         @apply bg-slate-50
     }
+    .slide{
+        @apply p-5 flex justify-center items-center  lg:flex-row  lg:w-[100%]  md:flex-row 
+    }
+    .slide img{
+        @apply rounded-[10%] lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[60%] md:w-[25%]
+    }
+    .slide div{
+        @apply  flex flex-col p-10 rounded-lg lg:h-[100%] text-white text-left
+    }
+    .slide div p:first-child{
+        @apply font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]
+    }
 }
 
 :root{

@@ -327,17 +327,17 @@ export default function Home() {
         <div className={`${styles.testimonial_container} flex flex-col items-center p-5 py-[5%] text-white lg:w-[100%] lg:h-[150vh]`}>
           <p className='lg:text-[35px] md:text-[35px] max-md:text-[35px]  sm:text-[30px] max-sm:text-[30px]'>Avail Our Services</p>
 
-          <div className='flex flex-col items-center justify-center mt-[10%] lg:w-[60%] lg:h-[50%] md:h-[100%]'>
+          <div className='flex flex-col items-center justify-center  mt-[10%] lg:w-[60%] lg:h-[50%] md:h-[50%] md:w-[70%]'>
 
-            <div ref={sliderRef2} className="flex lg:overflow-hidden lg:h-[80%]  lg:w-[100%] md:overflow-hidden">
-
-
-              <div className="keen-slider__slide  p-5 flex justify-center items-center  lg:flex-row md:flex-row  lg:w-[100%] md:w-[100%]  max-md:w-[100%]">
-                <Image src={require('../images/head_6.jpeg')} className='rounded-[10%] lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[60%] md:w-[25%] ' />
+            <div ref={sliderRef2} className="flex lg:overflow-hidden lg:h-[80%]  lg:w-[100%]  md:overflow-hidden md:w-[100%]">
 
 
-                <div className=' flex flex-col p-10 rounded-lg lg:h-[100%] text-white text-left' >
-                  <p className=' font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]'>Lorem, ipsum.</p>
+            <div className="keen-slider__slide rounded-lg  slide">
+                <Image src={require('../images/head_6.jpeg')}  />
+
+
+                <div>
+                  <p className=' '>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
@@ -345,12 +345,12 @@ export default function Home() {
 
 
 
-              <div className="keen-slider__slide  p-5 flex justify-center items-center  lg:flex-row md:flex-row  lg:w-[100%]">
-                <Image src={require('../images/head_6.jpeg')} className='rounded-[10%] lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[60%] md:w-[25%] ' />
+              <div className="keen-slider__slide rounded-lg  slide">
+                <Image src={require('../images/head_6.jpeg')}  />
 
 
-                <div className=' flex flex-col p-10 rounded-lg lg:h-[100%] text-white text-left' >
-                  <p className=' font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]'>Lorem, ipsum.</p>
+                <div>
+                  <p>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
