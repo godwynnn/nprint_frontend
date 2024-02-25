@@ -13,12 +13,16 @@ import { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+// KEEN SLIDER
+import slider from '@/src/slider';
 
-// import required modules
-import { Pagination, Autoplay } from 'swiper/modules';
-import { Suspense } from 'react';
+
+// Import Swiper React components
+// import { Swiper, SwiperSlide } from 'swiper/react';
+
+// // import required modules
+// import { Pagination, Autoplay } from 'swiper/modules';
+// import { Suspense } from 'react';
 
 
 const header_images = [
@@ -69,7 +73,7 @@ export default function Home() {
 
 
 
-  const [sliderRef] = useKeenSlider({
+  const [sliderRef1] = useKeenSlider({
     loop: true,
     renderMode: "performance",
     drag: false,
@@ -90,6 +94,44 @@ export default function Home() {
       s.moveToIdx(s.track.details.abs + 5, true, animation)
     },
   })
+
+
+  const [sliderRef2] = useKeenSlider(
+    {
+      loop: true,
+    },
+
+    [
+      (slider) => {
+        let timeout
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 2000)
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on("dragStarted", clearNextTimeout)
+        slider.on("animationEnded", nextTimeout)
+        slider.on("updated", nextTimeout)
+      },
+    ]
+  )
 
 
 
@@ -285,57 +327,40 @@ export default function Home() {
         <div className={`${styles.testimonial_container} flex flex-col items-center p-5 py-[5%] text-white lg:w-[100%] lg:h-[150vh]`}>
           <p className='lg:text-[35px] md:text-[35px] max-md:text-[35px]  sm:text-[30px] max-sm:text-[30px]'>Avail Our Services</p>
 
-          <div className='mt-[10%] lg:w-[60%] lg:h-[100%] md:h-[100%]'>
-            <Swiper
-              slidesPerView={1}
-              // spaceBetween={20}
-              loop={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: true,
-              }}
+          <div className='flex flex-col items-center justify-center mt-[10%] lg:w-[60%] lg:h-[50%] md:h-[100%]'>
 
-              // pagination={{
-              //   clickable: false,
-              //   dynamicBullets:true
-              // }}
-              modules={[Autoplay]}
-              className="mySwiper lg:h-[50%] lg:w-[100%] "
-            >
+            <div ref={sliderRef2} className="flex lg:overflow-hidden lg:h-[80%]  lg:w-[100%] md:overflow-hidden">
 
 
+              <div className="keen-slider__slide  p-5 flex justify-center items-center  lg:flex-row md:flex-row  lg:w-[100%] md:w-[100%]  max-md:w-[100%]">
+                <Image src={require('../images/head_6.jpeg')} className='rounded-[10%] lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[60%] md:w-[25%] ' />
 
-              <SwiperSlide className=' items-center p-[2%] lg:flex-row  '>
-                  <Image src={require('../images/head_6.jpeg')} className='lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[100%] rounded-[10%] ' />
 
-                
-                <div className=' flex flex-col p-10 rounded-lg lg:h-[50%] text-white text-left' >
+                <div className=' flex flex-col p-10 rounded-lg lg:h-[100%] text-white text-left' >
                   <p className=' font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]'>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
-              </SwiperSlide>
+              </div>
 
 
-              <SwiperSlide className=' items-center p-[2%] lg:flex-row  '>
-                  <Image src={require('../images/head_6.jpeg')} className='lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[100%] rounded-[10%] ' />
 
-                
-                <div className=' flex flex-col p-10 rounded-lg lg:h-[50%] text-white text-left' >
+              <div className="keen-slider__slide  p-5 flex justify-center items-center  lg:flex-row md:flex-row  lg:w-[100%]">
+                <Image src={require('../images/head_6.jpeg')} className='rounded-[10%] lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[60%] md:w-[25%] ' />
+
+
+                <div className=' flex flex-col p-10 rounded-lg lg:h-[100%] text-white text-left' >
                   <p className=' font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]'>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
-              </SwiperSlide>
-
-             
-
-
+              </div>
 
               
+              
 
-             
-            </Swiper>
+            </div>
+
 
           </div>
 

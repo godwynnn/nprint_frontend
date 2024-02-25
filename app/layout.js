@@ -1,12 +1,14 @@
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'tailwindcss'
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
 
 
 config.autoAddCss = false

@@ -429,19 +429,22 @@
 }
 .testimonial_container div{
   /* border: 1px solid red; */
- 
+  /* overflow: hidden; */
+
 
 }
-.testimonial_container div div div div:last-child p:first-child{
+.testimonial_container div div div div p:first-child{
   font-family: 'DM Serif Display', serif; 
 }
-.testimonial_container div div div div:last-child p:last-child{
+.testimonial_container div div div div p:last-child{
   font-family: "Chivo Mono", monospace;
 }
 
 
-.testimonial_container div div div div{
+.testimonial_container div div div{
   background-color: #171717;
   display: flex;
+ 
+  
   /* flex-direction: row; */
 }

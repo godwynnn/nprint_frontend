@@ -41,6 +41,7 @@
 body{
     width: 100%;
     min-height: 120vh;
+    
     position: relative;
     background: var(--header-color-2);
 }
@@ -262,3 +263,8 @@ body{
     fill: white;
 
 }
+
+
+
+
+

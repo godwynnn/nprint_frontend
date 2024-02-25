@@ -25,3 +25,66 @@
 
 
       </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <Swiper
+              slidesPerView={1}
+              spaceBetween={10}
+             
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: true,
+              }}
+
+              // pagination={{
+              //   clickable: false,
+              //   dynamicBullets:true
+              // }}
+              modules={[Autoplay]}
+              className="mySwiper "
+            >
+
+
+
+              <SwiperSlide className=' items-center p-[2%] lg:flex-row max-lg:w-[50%] max-md:w-[50%] md:flex-row md:w-[50%] '>
+                  <Image src={require('../images/head_6.jpeg')} className='rounded-[10%] lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[60%] md:w-[25%] ' />
+
+                
+                <div className=' flex flex-col p-10 rounded-lg lg:h-[50%] text-white text-left' >
+                  <p className=' font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]'>Lorem, ipsum.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
+                </div>
+              </SwiperSlide>
+
+              
+              <SwiperSlide className=' items-center p-[2%] lg:flex-row md:flex-row'>
+                  <Image src={require('../images/head_6.jpeg')} className='rounded-[10%] lg:h-[60%] lg:w-[25%]  lg:flex-row md:h-[60%] md:w-[25%] ' />
+
+                
+                <div className=' flex flex-col p-10 rounded-lg lg:h-[50%] text-white text-left' >
+                  <p className=' font-bold lg:text-[18px] md:text-[18px] sm:text-[18px] max-sm:text-[18px]'>Lorem, ipsum.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
+                </div>
+              </SwiperSlide>
+
+              
+
+
+             
+            </Swiper>
