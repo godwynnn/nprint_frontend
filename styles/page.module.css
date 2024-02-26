@@ -24,7 +24,7 @@
   padding: 4%;
   /* background-color: black; */
   /* border: 1px solid red; */
-  background-image: url(../images/splash.png);
+  /* background-image: url(../images/splash.png); */
   background-repeat: no-repeat;
   background-position: left -120% bottom 30%;
   background-size: 90%;
@@ -43,7 +43,7 @@
  
 }
 .sub_header_1 p span{
- color: white;
+ color: black;
 }
 .sub_header_1 p:last-child{
   font-size: 70px;

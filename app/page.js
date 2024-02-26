@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { FontawesomeObject } from '@fortawesome/fontawesome';
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,6 +19,8 @@ import slider from '@/src/slider';
 // GSAP
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLayoutEffect,useEffect } from 'react';
 // Import Swiper React components
 // import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -74,6 +76,8 @@ export default function Home() {
   const [looping, setLoop] = useState(true)
   const headerSlideRef = useRef()
   const head_img1=useRef()
+  const sect_1_img_holder=useRef()
+  const sect_1_img=useRef()
 
 
 
@@ -145,21 +149,34 @@ export default function Home() {
 
 
   // },[])
+  gsap.registerPlugin(ScrollTrigger)
 
 
   useGSAP(()=>{
     gsap.from(head_img1.current,{
-      y:-0.1,
+      
+      scrollTrigger:{
+        trigger:head_img1.current,
+        start:'top top',
+        end:'10%top 5%top',
+        markers:true,
+        // scrub:2,
+        
+      marker:true,
+      },
+      // x:10,
       // height:0,
       
-      opacity:0.2,
+      opacity:'0',
       // stagger:0.1,
       duration:2,
-      animation:'ease'
+      animation:'ease',
+      
+      
     
     
     })
-  })
+  },[])
 
   return (
     <main className={styles.main}>
@@ -247,8 +264,8 @@ export default function Home() {
           <button className='p-2 lg:w-[50%] md:w-[50%] sm:w-[50%] max-sm:w-[50%]'>Explore</button>
         </div>
 
-        <div className={`${styles.section_1_sub_section} p-[5%] lg:w-[50%] lg:h-[100vh]  md:w-[70%] md:min-h-[60%] md:p-[5%] sm:h-[80vh]`}>
-          <Image src={require('../images/products.png')} />
+        <div ref={sect_1_img_holder} className={`${styles.section_1_sub_section} p-[5%] lg:w-[50%] lg:h-[100vh]  md:w-[70%] md:min-h-[60%] md:p-[5%] sm:h-[80vh]`}>
+          <Image ref={sect_1_img} src={require('../images/products.png')} />
 
 
         </div>

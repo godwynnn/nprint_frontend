@@ -20,6 +20,7 @@
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "scrolltrigger": "^1.0.1",
     "swiper": "^11.0.6"
   },
   "devDependencies": {
