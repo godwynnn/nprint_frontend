@@ -16,13 +16,17 @@ import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
 // KEEN SLIDER
 import slider from '@/src/slider';
 
-
+// GSAP
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 // Import Swiper React components
 // import { Swiper, SwiperSlide } from 'swiper/react';
 
 // // import required modules
 // import { Pagination, Autoplay } from 'swiper/modules';
 // import { Suspense } from 'react';
+
+
 
 
 const header_images = [
@@ -69,6 +73,7 @@ export default function Home() {
   const animation = { duration: 40000, easing: (t) => t }
   const [looping, setLoop] = useState(true)
   const headerSlideRef = useRef()
+  const head_img1=useRef()
 
 
 
@@ -135,10 +140,26 @@ export default function Home() {
 
 
 
+
   // useEffect(()=>{
 
 
   // },[])
+
+
+  useGSAP(()=>{
+    gsap.from(head_img1.current,{
+      y:-0.1,
+      // height:0,
+      
+      opacity:0.2,
+      // stagger:0.1,
+      duration:2,
+      animation:'ease'
+    
+    
+    })
+  })
 
   return (
     <main className={styles.main}>
@@ -152,10 +173,10 @@ export default function Home() {
 
         </div>
 
-        <div className={styles.sub_header_2}>
+        <div className={styles.sub_header_2} >
 
 
-          <div>
+          <div ref={head_img1}>
             <Image src={require('../images/3D6.png')} alt="" />
           </div>
 
@@ -327,9 +348,9 @@ export default function Home() {
         <div className={`${styles.testimonial_container} flex flex-col items-center p-5 py-[5%] text-white lg:w-[100%] lg:h-[150vh]`}>
           <p className='lg:text-[35px] md:text-[35px] max-md:text-[35px]  sm:text-[30px] max-sm:text-[30px]'>Avail Our Services</p>
 
-          <div className='flex flex-col items-center justify-center  mt-[10%] lg:w-[60%] lg:h-[50%] md:h-[50%] md:w-[70%]'>
+          <div className='flex flex-col items-center justify-center  mt-[10%] lg:w-[60%] lg:h-[50%] md:h-[50%] md:w-[70%] sm:w-[70%] max-sm:w-[60%]'>
 
-            <div ref={sliderRef2} className="flex lg:overflow-hidden lg:h-[80%]  lg:w-[100%]  md:overflow-hidden md:w-[100%]">
+            <div ref={sliderRef2} className="flex lg:overflow-hidden lg:h-[80%]  lg:w-[100%]  md:overflow-hidden md:w-[100%]  sm:overflow-hidden  sm:w-[100%] max-sm:overflow-hidden max-sm:w-[100%]">
 
 
             <div className="keen-slider__slide rounded-lg  slide">
