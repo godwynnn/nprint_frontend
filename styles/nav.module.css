@@ -34,7 +34,8 @@
 .search_icon{
     font-size: 25px;
     cursor: pointer;
-    /* color: white; */
+    
+    color: rgb(235, 235, 235);
 }
 
 .nav ul li:nth-child(2){

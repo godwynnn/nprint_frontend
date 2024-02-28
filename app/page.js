@@ -166,10 +166,10 @@ export default function Home() {
         
       marker:true,
       },
-      // x:10,
-      // height:-1,
+      y:'100%',
+      // height:1,
       
-      opacity:'0',
+      // opacity:'0',
       // stagger:0.1,
       duration:2,
       animation:'ease',
@@ -250,21 +250,21 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <header className={`h-[100vh] w-full lg:flex-row max-lg:flex-row md:flex-col  ${styles.header}`}>
+      <header className={`lg:h-[100vh] w-full lg:flex-row max-lg:flex-row md:flex-col md:items-center md:h-[150vh]  ${styles.header}`}>
 
 
-        <div className={styles.sub_header_1}>
+        <div className={`lg:text-left lg:text-[70px] lg:w-[60%] max-lg:w-[40%]  md:text-center md:text-[90px]  ${styles.sub_header_1}`}>
           {/* <p>Africa's 1st 3D Print On Demand Agency</p> */}
           <p>WE ARE <br /><span>3DIMENSIONAL</span> </p>
 
 
         </div>
 
-        <div className={`header_img_holder ${styles.sub_header_2}`} >
+        <div className={`lg:w-[40%] md:w-[100%] max-lg:w-[60%]  header_img_holder ${styles.sub_header_2}`} >
 
 
           <div ref={head_img1}>
-            <Image src={require('../images/3D6.png')} alt="" />
+            <Image src={require('../images/3D6.png')} alt="" className='w-full h-full lg:w-full lg:h-full md:w-[90%] md:h-[90%]'/>
           </div>
 
           {/* <div>
