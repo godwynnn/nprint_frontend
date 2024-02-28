@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <>
     <nav className={styles.nav}>
-        <ul>
+        <ul className='lg:flex-row'>
             <li className='toggle' id='toggle' onClick={Toggle} ref={toggle}>
                 <hr />
             </li>
@@ -36,7 +36,7 @@ export default function Navbar() {
 
             <li>
 
-                <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.search_icon}/>
+                <FontAwesomeIcon icon={faMagnifyingGlass} className={` text-white lg:text-white md:text-black ${styles.search_icon}`}/>
 
             </li>
         </ul>

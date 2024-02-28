@@ -78,6 +78,8 @@ export default function Home() {
   const head_img1=useRef()
   const sect_1_img_holder=useRef()
   const sect_1_img=useRef()
+  const sect_1_txt=useRef()
+  const desc_container=useRef()
 
 
 
@@ -156,31 +158,99 @@ export default function Home() {
     gsap.from(head_img1.current,{
       
       scrollTrigger:{
-        trigger:head_img1.current,
-        start:'top top',
+        trigger:'.header_img_holder',
+        start:'-0.5%top top',
         end:'10%top 5%top',
-        markers:true,
+        // markers:true,
         // scrub:2,
         
       marker:true,
       },
       // x:10,
-      // height:0,
+      // height:-1,
       
       opacity:'0',
       // stagger:0.1,
       duration:2,
       animation:'ease',
-      
-      
-    
+      borderBottomLeftRadius:'50%',
+      borderBottomRightRadius:'50%'
     
     })
+
+    gsap.from(sect_1_img_holder.current,{
+      scrollTrigger:{
+        trigger:sect_1_img_holder.current,
+        start:'top top',
+        end:'10%top 5%top',
+        // markers:true,
+        // scrub:5,
+      },
+      width:'0%',
+      padding:'0%',
+      
+      duration:2,
+      ease:"elastic",
+      
+    })
+
+    
+  
+    gsap.from(sect_1_img.current,{
+      scrollTrigger:{
+        trigger:sect_1_img_holder.current,
+        start:'5%top top',
+        end:'10%top 5%top',
+        // markers:true,
+
+
+      },
+      x:'20%',
+      opacity:0,
+      delay:2,
+      duration:2.5,
+      animation:'ease'
+    })
+
+    gsap.from(sect_1_txt.current,{
+      scrollTrigger:{
+        trigger:sect_1_img_holder.current,
+        start:'5%top top',
+        end:'10%top 5%top',
+        // markers:true,
+      },
+      x:'-5%',
+      opacity:0,
+      delay:1,
+      duration:1,
+      ease:"power3",
+
+    })
+
+    gsap.from('.feature',{
+      scrollTrigger:{
+        trigger:desc_container.current,
+        start:'5%top top',
+        end:'10%top 5%top',
+        // markers:true,
+      },
+      scale:0,
+      duration:1,
+      ease:"bounce.in",
+      yoyo:true,
+      stagger:{
+        each:0.4
+      }
+
+
+    })
+
+
   },[])
 
   return (
     <main className={styles.main}>
-      <header className={styles.header}>
+      <header className={`h-[100vh] w-full lg:flex-row max-lg:flex-row md:flex-col  ${styles.header}`}>
 
 
         <div className={styles.sub_header_1}>
@@ -190,7 +260,7 @@ export default function Home() {
 
         </div>
 
-        <div className={styles.sub_header_2} >
+        <div className={`header_img_holder ${styles.sub_header_2}`} >
 
 
           <div ref={head_img1}>
@@ -210,7 +280,7 @@ export default function Home() {
 
       </header>
 
-      <section className={`${styles.features} grid lg:grid-cols-4 md:grid-cols-2 `}>
+      <section ref={desc_container} className={`${styles.features} grid lg:grid-cols-4 md:grid-cols-2 `}>
 
         <div className="feature">
           <FontAwesomeIcon icon={faGlobeAfrica} className='feature_icon' />
@@ -252,22 +322,25 @@ export default function Home() {
 
       {/* SECTION 1 */}
 
-      <section className={`${styles.section_1} flex lg:min-h-[140vh] lg:flex-row-reverse lg: -translate-y-[2%] md:min-h-[200vh] md:flex-col-reverse sm:min-h-[200vh] sm:flex-col-reverse max-sm:min-h-[200vh] max-sm:flex-col-reverse`}>
+      <section className={`${styles.section_1} flex lg:min-h-[140vh] lg:flex-row -translate-y-[2%] md:min-h-[200vh] md:flex-col sm:min-h-[200vh] sm:flex-col max-sm:min-h-[200vh] max-sm:flex-col`}>
 
 
-        <div className='lg:w-[40%] md:w-[80%]'>
+        
+
+        <div ref={sect_1_img_holder} className={`${styles.section_1_sub_section} p-[5%] lg:w-[60%] lg:h-[100vh]  md:w-[70%] md:min-h-[60%] md:p-[5%] sm:h-[80vh]`}>
+          <Image ref={sect_1_img} src={require('../images/products.png')} />
+
+
+        </div>
+
+
+        <div ref={sect_1_txt} className='lg:w-[40%] md:w-[80%]'>
           <p>About us</p>
           <p>we will make you a brand</p>
           <p>We provide prototypes to an assortment of industries from jewellery, engineering, automotive, architecture, consumer goods, etc. With our diverse range of state-of-the-art equipment, we offer customers complete solutions.
           </p>
 
           <button className='p-2 lg:w-[50%] md:w-[50%] sm:w-[50%] max-sm:w-[50%]'>Explore</button>
-        </div>
-
-        <div ref={sect_1_img_holder} className={`${styles.section_1_sub_section} p-[5%] lg:w-[50%] lg:h-[100vh]  md:w-[70%] md:min-h-[60%] md:p-[5%] sm:h-[80vh]`}>
-          <Image ref={sect_1_img} src={require('../images/products.png')} />
-
-
         </div>
 
 
