@@ -159,12 +159,12 @@ body{
 
 /* MENU */
 .menu{
-    width: 40%;
+    /* width: 40%; */
     height: 90vh;
     background-color: var(--header-color-1);
     position: fixed;
     top: 10vh;
-    left: -45%;
+    /* left: -45%; */
     border-bottom-right-radius: 0%;
      border-top-right-radius: 20%; 
     display: flex;
@@ -275,6 +275,13 @@ body{
     fill: white;
 
 }
+.show_slide{
+    display: flex;
+}
+.hide_slide{
+    display: none;
+} 
+
 
 
 

@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <>
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav}`}>
         <ul className='lg:flex-row'>
             <li className='toggle' id='toggle' onClick={Toggle} ref={toggle}>
                 <hr />

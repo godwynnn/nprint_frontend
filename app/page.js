@@ -74,17 +74,22 @@ const header_images = [
 export default function Home() {
   const animation = { duration: 40000, easing: (t) => t }
   const [looping, setLoop] = useState(true)
+  const [slide_loaded,setSlideLoaded]=useState(false)
   const headerSlideRef = useRef()
   const head_img1=useRef()
   const sect_1_img_holder=useRef()
   const sect_1_img=useRef()
   const sect_1_txt=useRef()
   const desc_container=useRef()
+  const splash_ref=useRef()
+  const operation_ref1=useRef()
+  const operation_ref2=useRef()
 
 
 
 
   const [sliderRef1] = useKeenSlider({
+    initial:0,
     loop: true,
     renderMode: "performance",
     drag: false,
@@ -110,7 +115,11 @@ export default function Home() {
   const [sliderRef2] = useKeenSlider(
     {
       loop: true,
+      
+     
     },
+    
+
 
     [
       (slider) => {
@@ -130,6 +139,8 @@ export default function Home() {
           slider.container.addEventListener("mouseover", () => {
             mouseOver = true
             clearNextTimeout()
+         
+            setSlideLoaded(true)
           })
           slider.container.addEventListener("mouseout", () => {
             mouseOver = false
@@ -147,10 +158,10 @@ export default function Home() {
 
 
 
-  // useEffect(()=>{
+  useEffect(()=>{
 
-
-  // },[])
+    setSlideLoaded(true)
+  },[])
   gsap.registerPlugin(ScrollTrigger)
 
 
@@ -181,7 +192,7 @@ export default function Home() {
     gsap.from(sect_1_img_holder.current,{
       scrollTrigger:{
         trigger:sect_1_img_holder.current,
-        start:'top top',
+        start:'5%top top',
         end:'10%top 5%top',
         // markers:true,
         // scrub:5,
@@ -189,7 +200,7 @@ export default function Home() {
       width:'0%',
       padding:'0%',
       
-      duration:2,
+      duration:1.5,
       ease:"elastic",
       
     })
@@ -208,7 +219,7 @@ export default function Home() {
       x:'20%',
       opacity:0,
       delay:2,
-      duration:2.5,
+      duration:1,
       animation:'ease'
     })
 
@@ -239,10 +250,36 @@ export default function Home() {
       ease:"bounce.in",
       yoyo:true,
       stagger:{
-        each:0.4
+        each:0.2
       }
 
 
+    })
+
+    gsap.from(operation_ref1.current,{
+      scrollTrigger:{
+        trigger:operation_ref1.current,
+        start:'20%top top',
+        end:'10%bottom top',
+        // markers:true,
+      },
+      opacity:0,
+      rotate:'-45deg',
+      duration:1,
+    })
+
+    gsap.from(operation_ref2.current,{
+      scrollTrigger:{
+        trigger:operation_ref2.current,
+        start:'30%top top',
+        end:'50%bottom top',
+        // markers:true,
+      },
+      opacity:0,
+      x:'20px',
+      
+      duration:1,
+      animation:'ease'
     })
 
 
@@ -250,21 +287,21 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <header className={`lg:h-[100vh] w-full lg:flex-row max-lg:flex-row md:flex-col md:items-center md:h-[150vh]  ${styles.header}`}>
+      <header className={`lg:h-[100vh] w-full lg:flex-row max-lg:flex-row md:flex-col md:items-center md:h-[150vh] sm:flex-col  sm:items-center sm:h-[120vh] max-sm:h-[120vh] max-sm:flex-col items-center  ${styles.header}`}>
 
 
-        <div className={`lg:text-left lg:text-[70px] lg:w-[60%] max-lg:w-[40%]  md:text-center md:text-[90px]  ${styles.sub_header_1}`}>
+        <div className={`lg:text-left lg:text-[70px] lg:w-[60%] max-lg:w-[40%] md:w-[100%]  md:text-center md:text-[90px] sm:text-[70px] sm:text-center sm:w-full max-sm:w-full max-sm:text-[50px] max-sm:text-center  ${styles.sub_header_1}`}>
           {/* <p>Africa's 1st 3D Print On Demand Agency</p> */}
           <p>WE ARE <br /><span>3DIMENSIONAL</span> </p>
 
 
         </div>
 
-        <div className={`lg:w-[40%] md:w-[100%] max-lg:w-[60%]  header_img_holder ${styles.sub_header_2}`} >
+        <div className={`lg:w-[40%] lg:h-full  max-lg:w-[70%]  md:w-[100%] md:h-full sm:w-[100%] sm:h-full max-sm:h-full header_img_holder ${styles.sub_header_2}`} >
 
 
-          <div ref={head_img1}>
-            <Image src={require('../images/3D6.png')} alt="" className='w-full h-full lg:w-full lg:h-full md:w-[90%] md:h-[90%]'/>
+          <div ref={head_img1} className='lg:w-[90%] lg:h-full md:h-full sm:h-full sm:w-[60%]'>
+            <Image src={require('../images/3D6.png')} alt="" className='w-full h-full lg:w-full lg:h-full md:w-[90%] md:h-[90%] '/>
           </div>
 
           {/* <div>
@@ -369,7 +406,7 @@ export default function Home() {
       <section className={`${styles.operation}  lg:h-[120vh] lg:w-[100%] relative`}>
 
         <div className=' flex lg:h-[80%] lg:w-[100%] lg:flex-row items-center md:flex-col  sm:flex-col max-sm:flex-col'>
-          <div className='flex p-[8%] flex-col items-right justify-center lg:h-[100%] lg:w-[60%] md:h-[40%] '>
+          <div ref={operation_ref1} className='flex p-[8%] flex-col items-right justify-center lg:h-[100%] lg:w-[60%] md:h-[40%] '>
             <p>Operational Plan</p>
             <p className='mt-4'>Utilizing cutting-edge 3D
               printing technology and regularly
@@ -381,7 +418,7 @@ export default function Home() {
 
           </div>
 
-          <Image className=' lg:w-[30%] md:w-[50%] sm:w-[60%] max-sm:w-[60%]' src={require('../images/machine.png')} />
+          <Image ref={operation_ref2} className=' lg:w-[30%] md:w-[50%] sm:w-[60%] max-sm:w-[60%]' src={require('../images/machine.png')} />
 
         </div>
 
@@ -438,12 +475,12 @@ export default function Home() {
         <div className={`${styles.testimonial_container} flex flex-col items-center p-5 py-[5%] text-white lg:w-[100%] lg:h-[150vh]`}>
           <p className='lg:text-[35px] md:text-[35px] max-md:text-[35px]  sm:text-[30px] max-sm:text-[30px]'>Avail Our Services</p>
 
-          <div className='flex flex-col items-center justify-center  mt-[10%] lg:w-[60%] lg:h-[50%] md:h-[50%] md:w-[70%] sm:w-[70%] max-sm:w-[60%]'>
+          <div className={`flex flex-col items-center justify-center  mt-[10%] lg:w-[60%] lg:h-[50%] md:h-[50%] md:w-[70%] sm:w-[70%] max-sm:w-[60%]`}>
 
-            <div ref={sliderRef2} className="flex lg:overflow-hidden lg:h-[80%]  lg:w-[100%]  md:overflow-hidden md:w-[100%]  sm:overflow-hidden  sm:w-[100%] max-sm:overflow-hidden max-sm:w-[100%]">
+            <div ref={sliderRef2} className={`lg:overflow-hidden lg:h-[80%]  lg:w-[100%]  md:overflow-hidden md:w-[100%]  sm:overflow-hidden  sm:w-[100%] max-sm:overflow-hidden max-sm:w-[100%]`}>
 
 
-            <div className="keen-slider__slide rounded-lg  slide">
+            <div className={`${slide_loaded?'show_slide':'hide_slide'} keen-slider__slide rounded-lg  slide`}>
                 <Image src={require('../images/head_6.jpeg')}  />
 
 
@@ -456,12 +493,12 @@ export default function Home() {
 
 
 
-              <div className="keen-slider__slide rounded-lg  slide">
+              <div className={`${slide_loaded?'show_slide':'hide_slide'} keen-slider__slide rounded-lg  slide`}>
                 <Image src={require('../images/head_6.jpeg')}  />
 
 
                 <div>
-                  <p>Lorem, ipsum.</p>
+                  <p className=' '>Lorem, ipsum.</p>
 
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos! Error cumque doloremque deserunt ratione?</p>
                 </div>
